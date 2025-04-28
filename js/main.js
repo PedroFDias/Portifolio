@@ -54,11 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     const idCard = parseInt(btn.closest('.projeto').id, 10);
                     const proj = jsonProjetos.find(p => p.id === idCard);
 
-                    const existingCarousel = bootstrap.Carousel.getInstance(document.getElementById('carouselExampleSlidesOnly'));
-                    if (existingCarousel) {
-                        existingCarousel.dispose(); // DESTROI a instância
-                    }
-
                     let carrosel = `<div class="carousel-item active">
                                     <img src="${proj.images[0]}" class="d-block w-100" alt="...">
                                 </div>`;
@@ -73,11 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     descricao.textContent = proj.descricao;
 
                     modal.style.display = "flex";
-
-                    const carousel = new bootstrap.Carousel(document.getElementById('carouselExampleSlidesOnly'), {
-                        interval: 3000, // tempo entre slides (3 segundos)
-                        ride: 'carousel'
-                    });
                 })
             })
 

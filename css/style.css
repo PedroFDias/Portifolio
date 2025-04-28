@@ -150,19 +150,41 @@ body {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        font-size: 35px;
+        font-size: 35px !important;
         width: 100%;
 
         .apresentacao {
             display: flex;
             flex-direction: column;
+            gap: 30px;
 
             .apresentacao-script {
                 font-family: "Chakra Petch" !important;
                 display: flex;
-                width: 100%;
+                width: 70%;
                 flex-direction: column;
                 gap: 30px;
+
+                h1 {
+                    font-weight: 800;
+                    font-size: 4rem;
+                }
+
+                h6 {
+                    font-weight: 800;
+                    font-size: 1.3rem;
+                }
+
+                h3 {
+                    font-weight: 800;
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-family: 'Inter', sans-serif !important;
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
             }
 
             #linksIcons a {
@@ -174,7 +196,7 @@ body {
                 background: transparent;
                 border: 1px solid #0ef;
                 border-radius: 50%;
-                font-size: 20px;
+                font-size: 20px !important;
                 color: #0ef;
                 text-decoration: none;
                 margin: 35px 15px 35px 0;
@@ -202,19 +224,12 @@ body {
             color: black;
             font-weight: 600;
             background: #0ef;
-            width: 130px;
+            width: 180px;
             transition: all 0.3s ease;
 
             &:hover {
                 transform: translateY(3px);
             }
-        }
-
-        p {
-            display: flex;
-            font-size: 16px;
-            color: #d7f9ff;
-            font-weight: 300;
         }
 
         div>h3>span {
