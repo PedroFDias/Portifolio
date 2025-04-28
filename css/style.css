@@ -372,17 +372,20 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
 
-    img {
-        width: 100%;
-    }
-
     .modal-content {
+        display: grid;
+        grid-template-areas:
+            "carrosel carrosel titulo"
+            "carrosel carrosel descricao"
+            "carrosel carrosel descricao"
+            "carrosel carrosel tecnologias";
         background: #122a2e;
         padding: 20px;
         border-radius: 8px;
-        width: 50vw;
-        height: 70vh;
+        width: 70vw;
+        height: 50vh;
         text-align: center;
+        gap: 20px;
 
         .modal-close {
             position: absolute;
@@ -397,6 +400,26 @@ body {
             &:hover {
                 color: #ff0000;
             }
+        }
+
+        h4 {
+            grid-area: titulo;
+            color: #d7f9ff;
+            
+        }
+
+        div {
+            grid-area: carrosel;
+        }
+
+        #modal-description{
+            grid-area: descricao;
+            color: #d7f9ff;
+            text-align: justify;
+        }
+        #tecnologias{
+            grid-area: tecnologias;
+            color: #d7f9ff;
         }
     }
 }

@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById('modal');
     const titulo = document.getElementById('modal-title');
     const descricao = document.getElementById('modal-description');
+    const tecno = document.getElementById('tecnologias');
     const btnClose = document.querySelector('.modal-close');
     const carroselHTML = document.querySelector('#carouselExampleSlidesOnly .carousel-inner');
 
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     carroselHTML.innerHTML = carrosel;
                     titulo.textContent = proj.titulo;
                     descricao.textContent = proj.descricao;
-
+                    tecno.textContent = proj.tecnologias;
                     modal.style.display = "flex";
                 })
             })
