@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "titulo": "Order Mananger - API REST",
+        "descricao": "O OrderManager é um sistema backend desenvolvido em Java com Spring Boot que oferece funcionalidades essenciais para o gerenciamento de pedidos de clientes e produtos. Ele simula a base de um sistema de e-commerce, permitindo registrar pedidos, controlar produtos e acompanhar as informações das compras realizadas. Este projeto tem como objetivo praticar e aplicar conceitos de APIs RESTful, mapeamento objeto-relacional com JPA/Hibernate, relacionamento entre entidades e uso de DTOs para uma arquitetura limpa.",
+        "images": [
+            "images/projetos/OrderMananger1.png",
+            "images/projetos/OrderMananger2.png",
+            "images/projetos/OrderMananger3.png",
+            "images/projetos/OrderMananger4.png",
+            "images/projetos/OrderMananger5.png",
+            "images/projetos/OrderMananger6.png",
+            "images/projetos/OrderMananger7.png"
+        ],
+        "link":"https://github.com/PedroFDias/Order-Mananger"
+    },
+    {
+        "id": 2,
+        "titulo": "SeachFipe",
+        "descricao": "Este projeto é uma aplicação Java (ou a linguagem que você usou) que permite consultar informações detalhadas sobre veículos utilizando a FIPE API. O programa faz uma requisição HTTP para a API e retorna dados como marca, modelo, ano e preço médio de veículos.",
+        "images": [
+            "images/projetos/OrderMananger1.png",
+            "images/projetos/OrderMananger2.png",
+            "images/projetos/OrderMananger3.png",
+            "images/projetos/OrderMananger4.png",
+            "images/projetos/OrderMananger5.png",
+            "images/projetos/OrderMananger6.png",
+            "images/projetos/OrderMananger7.png"
+        ],
+        "link":"https://github.com/PedroFDias/SeachFipe"
+    }
+]

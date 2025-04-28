@@ -1,0 +1,11 @@
+// Importa as variáveis do Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Importa apenas as partes do Bootstrap que você precisa (Modal e Carousel)
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/carousel";
+
+// Também pode importar as utilitárias que o Modal e Carousel necessitam
+@import "~bootstrap/scss/utilities";
