@@ -2,17 +2,18 @@
     {
         "id": 1,
         "titulo": "Order Mananger - API REST",
-        "descricao": "O OrderManager é um sistema backend desenvolvido em Java com Spring Boot que oferece funcionalidades essenciais para o gerenciamento de pedidos de clientes e produtos. Ele simula a base de um sistema de e-commerce, permitindo registrar pedidos, controlar produtos e acompanhar as informações das compras realizadas.",
+        "descricao":"O OrderManager é um sistema backend desenvolvido em Java com Spring Boot, que simula o gerenciamento de pedidos em um e-commerce. A aplicação permite cadastrar produtos, registrar pedidos e acompanhar o histórico de compras de clientes. É estruturado em camadas (Controller, Service, Repository), seguindo boas práticas da arquitetura RESTful." ,
         "images": [
             "images/projetos/OrderMananger1.png",
             "images/projetos/OrderMananger2.png",
             "images/projetos/OrderMananger3.png",
             "images/projetos/OrderMananger4.png",
             "images/projetos/OrderMananger5.png",
-            "images/projetos/OrderMananger7.png"
+            "images/projetos/OrderMananger7.png",
+            "images/projetos/OrderMananger8.png"
         ],
         "link": "https://github.com/PedroFDias/Order-Mananger",
-        "tecnologias": "CSS, SCSS, JavaScript"
+        "tecnologias": "Java · Spring Boot · Spring Data JPA · Hibernate · PostgreSQL · Lombok · Maven · Insomnia"
     },
     {
         "id": 2,
@@ -25,10 +26,11 @@
             "images/projetos/OrderMananger4.png",
             "images/projetos/OrderMananger5.png",
             "images/projetos/OrderMananger6.png",
-            "images/projetos/OrderMananger7.png"
+            "images/projetos/OrderMananger7.png",
+            "images/projetos/OrderMananger8.png"
         ],
         "link": "https://github.com/PedroFDias/SeachFipe",
-        "tecnologias": "CSS, SCSS, JavaScript"
+        "tecnologias": "Java · Spring Boot · Maven"
     },
     {
         "id": 3,
