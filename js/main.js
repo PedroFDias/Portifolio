@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const titulo = document.getElementById('modal-title');
     const descricao = document.getElementById('modal-description');
     const tecno = document.getElementById('tecnologias');
+    const participacao = document.getElementById('participacao');
     const btnClose = document.querySelector('.modal-close');
     const carroselHTML = document.querySelector('#carouselExampleSlidesOnly .carousel-inner');
 
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <img class="casacidada" src="${p.images[0]}" alt="">
                                 <div class="linkIcons">
                                     <a href="${p.link}"><i class="bi bi-github"></i></a>
-                                    <a href="#!" class="saiba-mais"><i class="bi bi-info-circle"></i></a>
+                                    <a href="#!" class="saiba-mais"><span>Saiba-mais</span><i class="bi bi-info-circle"></i></a>
                                 </div>
                             </div>`;
             })
@@ -68,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     titulo.textContent = proj.titulo;
                     descricao.textContent = proj.descricao;
                     tecno.textContent = proj.tecnologias;
+                    participacao.textContent = proj.participacao;
                     modal.style.display = "flex";
                 })
             })

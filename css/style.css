@@ -240,6 +240,72 @@ body {
 
 }
 
+#sobre-mim {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+
+    .sobre-mim {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        justify-content: space-around   ;
+        .info{
+            display: grid;
+            grid-template-areas: "titulo descricao";
+            grid-template-columns: 500px 1fr;
+
+            h2{
+                grid-area: titulo;
+                text-align: center;
+                justify-content: center;
+            }
+    
+            p{
+                grid-area: descricao;
+                text-align: justify;
+            }
+        }
+        
+        .tecno{
+            display: grid;
+            grid-template-areas: "descricao titulo";
+            grid-template-columns:1fr 500px;
+
+            h2{
+                grid-area: titulo;
+                justify-self: center;
+                align-self: center;
+            }
+    
+            p{
+                grid-area: descricao;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                svg{
+                    width: 80px;
+                }
+            }
+        }
+        h2 {
+            font-family: "Chakra Petch";
+            text-decoration: none;
+            font-size: 60px;
+            color: #d7f9ff;
+            font-weight: bold;
+            background: transparent;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #d7f9ff;
+        }
+    }
+}
+
 /*Meus Projetos*/
 #MeusProjetos {
     width: 100%;
@@ -248,7 +314,8 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        min-height: 70vh;
+        justify-content: space-evenly;
+        min-height: 65vh;
         margin: 0 auto;
         gap: 50px;
 
@@ -272,12 +339,10 @@ body {
     .projetos {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        justify-content: space-between;
         flex-wrap: wrap;
-        height: 60%;
+        height: 100%;
         width: 100%;
         gap: 2rem;
-        align-items: center;
 
         >div {
             display: flex;
@@ -289,6 +354,7 @@ body {
             transition: all 0.3s ease;
             padding: 20px;
             grid-column: span 1;
+            justify-content: space-between;
 
             &:hover {
                 transform: scale(1.1);
@@ -305,7 +371,6 @@ body {
 
             .linkIcons {
                 display: flex;
-                position: static;
                 flex-direction: row;
                 gap: 10px;
                 color: #d7f9ff;
@@ -313,6 +378,22 @@ body {
                 margin: 0;
                 padding: 0;
                 border: none;
+
+                .saiba-mais {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    border-radius: 100px;
+                    width: 105px;
+
+                    i {
+                        margin-left: px;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        margin-left: 3px;
+                    }
+                }
             }
         }
 
@@ -377,13 +458,13 @@ body {
         grid-template-areas:
             "carrosel carrosel titulo"
             "carrosel carrosel descricao"
-            "carrosel carrosel descricao"
+            "carrosel carrosel atuacao"
             "carrosel carrosel tecnologias";
         background: #122a2e;
         padding: 20px;
         border-radius: 8px;
         width: 70vw;
-        height: 50vh;
+        height: 53vh;
         text-align: center;
         gap: 20px;
 
@@ -402,24 +483,37 @@ body {
             }
         }
 
+        #carouselExampleSlidesOnly #carrosel {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
         h4 {
             grid-area: titulo;
             color: #d7f9ff;
-            
+
         }
 
         div {
             grid-area: carrosel;
         }
 
-        #modal-description{
+        #modal-description {
             grid-area: descricao;
             color: #d7f9ff;
             text-align: justify;
         }
-        #tecnologias{
+
+        #tecnologias {
             grid-area: tecnologias;
             color: #d7f9ff;
+        }
+
+        #participacao {
+            grid-area: atuacao;
+            color: #d7f9ff;
+            text-align: justify;
         }
     }
 }

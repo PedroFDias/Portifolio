@@ -1,8 +1,22 @@
 [
     {
         "id": 1,
+        "titulo": "Casa Cidada - ONG",
+        "descricao": "Casa Cidadã é um sistema desenvolvido como projeto acadêmico com o objetivo de apoiar uma ONG que oferece abrigo a pessoas em situação de rua. A plataforma auxilia a ONG a organizar seus serviços e alcançar maior autonomia por meio da tecnologia.",
+        "images": [
+            "images/projetos/casacidada2.png",
+            "images/projetos/casacidada1.png",
+            "images/projetos/casacidada3.png",
+            "images/projetos/casacidada4.png"
+        ],
+        "link": "https://github.com/LucasDias2002/CasaCidada",
+        "tecnologias": "Java ScriptCSS · NodeJs · Express · Sequeliza · Cloudinary · PostgreSQL",
+        "participacao": "No projeto, atuei na implementação da API e do backend, desenvolvendo funcionalidades como o CRUD de usuários e dados da instituição, integração com o banco de dados MySQL, e testes de requisições com ferramentas como Postman e Insomnia."
+    },
+    {
+        "id": 2,
         "titulo": "Order Mananger - API REST",
-        "descricao":"O OrderManager é um sistema backend desenvolvido em Java com Spring Boot, que simula o gerenciamento de pedidos em um e-commerce. A aplicação permite cadastrar produtos, registrar pedidos e acompanhar o histórico de compras de clientes. É estruturado em camadas (Controller, Service, Repository), seguindo boas práticas da arquitetura RESTful." ,
+        "descricao": "O OrderManager é um sistema backend desenvolvido em Java com Spring Boot, que simula o gerenciamento de pedidos em um e-commerce. A aplicação permite cadastrar produtos, registrar pedidos e acompanhar o histórico de compras de clientes. É estruturado em camadas (Controller, Service, Repository), seguindo boas práticas da arquitetura RESTful.",
         "images": [
             "images/projetos/OrderMananger1.png",
             "images/projetos/OrderMananger2.png",
@@ -13,10 +27,11 @@
             "images/projetos/OrderMananger8.png"
         ],
         "link": "https://github.com/PedroFDias/Order-Mananger",
-        "tecnologias": "Java · Spring Boot · Spring Data JPA · Hibernate · PostgreSQL · Lombok · Maven · Insomnia"
+        "tecnologias": "Java · Spring Boot · Spring Data JPA · Hibernate · PostgreSQL · Lombok · Maven · Insomnia",
+        "participacao": "No projeto, atuei na implementação da API e do backend, desenvolvendo funcionalidades como o CRUD de usuários e dados da instituição, integração com o banco de dados MySQL, e testes de requisições com ferramentas como Postman e Insomnia."
     },
     {
-        "id": 2,
+        "id": 3,
         "titulo": "SeachFipe",
         "descricao": "Este projeto é uma aplicação Java (ou a linguagem que você usou) que permite consultar informações detalhadas sobre veículos utilizando a FIPE API. O programa faz uma requisição HTTP para a API e retorna dados como marca, modelo, ano e preço médio de veículos.",
         "images": [
@@ -29,10 +44,11 @@
             "images/projetos/OrderMananger8.png"
         ],
         "link": "https://github.com/PedroFDias/SeachFipe",
-        "tecnologias": "Java · Spring Boot · Maven"
+        "tecnologias": "Java · Spring Boot · Maven",
+        "participacao": "No projeto, atuei na implementação da API e do backend, desenvolvendo funcionalidades como o CRUD de usuários e dados da instituição, integração com o banco de dados MySQL, e testes de requisições com ferramentas como Postman e Insomnia."
     },
     {
-        "id": 3,
+        "id": 4,
         "titulo": "Portifólio",
         "descricao": "Este projeto é uma aplicação Java (ou a linguagem que você usou) que permite consultar informações detalhadas sobre veículos utilizando a FIPE API. O programa faz uma requisição HTTP para a API e retorna dados como marca, modelo, ano e preço médio de veículos.",
         "images": [
@@ -40,6 +56,7 @@
             "images/projetos/portifolio2.png"
         ],
         "link": "https://github.com/PedroFDias/Portifolio",
-        "tecnologias": "CSS, SCSS, JavaScript"
+        "tecnologias": "CSS, SCSS, JavaScript",
+        "participacao": "No projeto, atuei na implementação da API e do backend, desenvolvendo funcionalidades como o CRUD de usuários e dados da instituição, integração com o banco de dados MySQL, e testes de requisições com ferramentas como Postman e Insomnia."
     }
 ]
