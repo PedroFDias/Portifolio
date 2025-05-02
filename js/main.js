@@ -1,7 +1,7 @@
 var typed = new Typed(".text", {
     strings: ["Desenvolvedor de Software", "Estudande de Programação"],
-    typeSpeed: 100,
-    backSpeed: 100,
+    typeSpeed: 50,
+    backSpeed: 50,
     backDelay: 1000,
     loop: true
 });
