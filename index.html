@@ -17,7 +17,12 @@
         <div class="container">
             <div class="header">
                 <a id="nome" href="index.html"><strong>Pedro Dias</strong></a>
-                <nav>
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="open">&#9776;</span>
+                    <span class="close">&times;</span>
+                </label>
+                <nav id="menu">
                     <a href="">Inicio</a>
                     <a href="#MeusProjetos">Projetos</a>
                     <a href="#Contato">Contato</a>
@@ -34,7 +39,7 @@
                         <h1>Pedro Dias</h1>
                         <h3>E sou <span class="text"></span> </h3>
                     </div>
-                    <div>
+                    <div class="resumo">
                         <p>Atualmente cursando Análise e Desenvolvimento de Sistemas na PUC-Minas, com foco em
                             desenvolvimento backend e experiências em projetos práticos.
                         </p>
@@ -43,13 +48,13 @@
                         <a href="https://github.com/PedroFDias"><i class="bi bi-github"></i></a>
                         <a href="http://www.linkedin.com/in/pedrofdias"><i class="bi bi-linkedin"></i></a>
                     </div>
+                    <div class="circulo-fora">
+                        <div id="imagemPerfil" class="circulo-dentro">
+                            <img id="imgPerfil" src="images/perfil2.png" alt="Foto de Perfil"
+                                class="w-full h-full rounded-full object-cover">
+                        </div>
+                    </div>
                     <a class="maisSobre" href="">Mais Sobre mim</a>
-                </div>
-            </div>
-            <div class="circulo-fora">
-                <div id="imagemPerfil" class="circulo-dentro">
-                    <img id="imgPerfil" src="images/perfil2.png" alt="Foto de Perfil"
-                        class="w-full h-full rounded-full object-cover">
                 </div>
             </div>
         </div>
@@ -126,7 +131,7 @@
         </div>
     </main>
     <footer class="fundo-section-footer">
-        <div class="footer">
+        <div class="footer container">
             <div class="div1">
                 <div>
                     <p>Desenvolvido com:<br>HTML, CSS e JavaScript</p>

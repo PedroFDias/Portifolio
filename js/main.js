@@ -89,3 +89,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 })
+
+const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    let menuAberto = false;
+
+    toggle.addEventListener('click', () => {
+        menuAberto = !menuAberto;
+        menu.classList.toggle('active');
+
+        // Troca o ícone
+        toggle.textContent = menuAberto ? '✖' : '☰';
+    });

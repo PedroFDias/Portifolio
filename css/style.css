@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 16px;
 }
 
 .fundo-section {
@@ -64,10 +65,40 @@ body {
     background-color: transparent;
     transition: background-color 0.3s ease;
 
+    #menu-toggle {
+        display: none;
+        font-size: 50px;
+        background: none;
+        border: none;
+        color: #d7f9ff;
+        cursor: pointer;
+    }
+
     div .header {
         display: flex;
+        position: relative;
         justify-content: space-between;
         width: 100vw;
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        
+        #menu-toggle {
+            display: none;
+        }
+        
+        .menu-icon {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .menu-icon .close {
+            display: none;
+        }
 
         #nome:after {
             content: '';
@@ -108,37 +139,6 @@ body {
     }
 }
 
-.circulo-fora {
-    min-width: 355px;
-    height: 355px;
-    background-color: #081b29;
-    /* Borda externa - amarelo mostarda */
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .circulo-dentro {
-        width: 345px;
-        height: 345px;
-        background-color: #01080e;
-        /* Borda interna - laranja queimado */
-        border-radius: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        #imgPerfil {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 340px;
-            max-height: 340px;
-            border-radius: 50%;
-        }
-    }
-}
-
 #inicio {
     display: flex;
     justify-content: space-between;
@@ -153,12 +153,19 @@ body {
         width: 100%;
 
         .apresentacao {
-            display: flex;
+            display: grid;
+            grid-template-areas:
+                "apresentacao img"
+                "apresentacao img"
+                "resumo         img"
+                "links         img"
+                "saibaMais    img";
             flex-direction: column;
             gap: 30px;
 
             .apresentacao-script {
                 font-family: "Chakra Petch" !important;
+                grid-area: apresentacao;
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
@@ -192,6 +199,7 @@ body {
 
             #linksIcons {
                 display: flex;
+                grid-area: links;
                 gap: 20px;
             }
 
@@ -218,9 +226,42 @@ body {
                     box-shadow: 0 0 20px #0fe;
                 }
             }
+
+            .circulo-fora {
+                grid-area: img;
+                min-width: 355px;
+                height: 355px;
+                background-color: #081b29;
+                /* Borda externa - amarelo mostarda */
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .circulo-dentro {
+                    width: 345px;
+                    height: 345px;
+                    background-color: #01080e;
+                    /* Borda interna - laranja queimado */
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    #imgPerfil {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: 340px;
+                        max-height: 340px;
+                        border-radius: 50%;
+                    }
+                }
+            }
         }
 
         .maisSobre {
+            grid-area: saibaMais;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -721,43 +762,92 @@ body {
     }
 }
 
-@media screen and (max-width:600px) {
 
-    #inicio {
-        padding: 0;
-        display: flex;
-        justify-content: center;
+
+@media screen and (max-width:770px) {
+
+
+    .container {
+        padding-inline: 20px;
     }
 
-    .circulo-fora {
-        min-width: 310px;
-        height: 310px;
-        background-color: #081b29;
-        border-radius: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    #inicio {
+        margin-top: 50px;
 
-        .circulo-dentro {
-            width: 305px;
-            height: 305px;
-            background-color: #01080e;
-            border-radius: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        #apresentacao {
 
-            #imgPerfil {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                max-width: 300px;
-                max-height: 300px;
-                border-radius: 50%;
+            .apresentacao {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "apresentacao apresentacao"
+                    "sobreMim     sobreMim"
+                    "img          img"
+                    "saibaMais    icons";
+
+                .apresentacao-script {
+                    grid-area: apresentacao;
+                    width: 100%;
+
+                    h6 {
+                        font-size: 0.8rem;
+                    }
+
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                div {
+                    grid-area: sobreMim;
+                    width: 100%;
+
+                    p {
+                        grid-area: sobreMim;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                #linksIcons {
+                    grid-area: icons;
+                    justify-content: center;
+                }
+
+                .circulo-fora {
+                    grid-area: img;
+                    width: fit-content;
+                    justify-self: center;
+
+
+                    .circulo-dentro {
+                        width: 100%;
+                        height: 100%;
+                        background-color: #01080e;
+                        /* Borda interna - laranja queimado */
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        #imgPerfil {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            max-width: 340px;
+                            max-height: 340px;
+                            border-radius: 50%;
+                        }
+                    }
+
+
+                }
             }
         }
     }
-
 
     .projetos {
         display: flex;
@@ -822,5 +912,41 @@ body {
         img {
             display: none;
         }
+    }
+}
+
+@media screen and (max-width:500px) {
+    #cabecaclho .menu-icon {
+        display: block;
+        z-index: 1100;
+    }
+    #menu-toggle {
+        display: block;
+    }
+    /* ESCONDE O MENU */
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px; /* altura do header */
+        right: 0;
+        background: white;
+        width: max-content;
+        padding: 15px 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 998;
+    }
+
+    /* MOSTRA MENU QUANDO CHECKED */
+    #menu-toggle:checked ~ .menu-icon .open {
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .menu-icon .close {
+        display: inline;
+    }
+
+    #menu-toggle:checked ~ #menu {
+        display: flex;
     }
 }
