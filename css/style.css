@@ -103,7 +103,7 @@ body {
         }
 
         a {
-            color:#d7f9ff;
+            color: #d7f9ff;
             text-decoration: none;
             background-color: transparent;
             font-size: 20px;
@@ -533,7 +533,6 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
-    z-index: 999;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
 
@@ -774,7 +773,7 @@ body {
                     z-index: 2000;
                 }
 
-                #menu{
+                #menu {
                     position: fixed;
                     top: 0;
                     left: 0;
@@ -792,20 +791,22 @@ body {
                 }
 
             }
-            
+
         }
-        .header.active #menu{
+
+        .header.active #menu {
             clip-path: circle(1500px at 100% -15%);
             pointer-events: all;
-        } 
+        }
     }
 
     #inicio {
-        margin-top:70px ;
+        margin-top: 70px;
 
         #apresentacao {
             margin: 0;
             padding: 0;
+
             .apresentacao {
                 display: grid;
                 grid-template-columns: 1fr;
@@ -878,7 +879,7 @@ body {
                     }
                 }
 
-                a{
+                a {
                     grid-area: saibaMais;
                     justify-self: center;
 
@@ -948,6 +949,46 @@ body {
                 .projeto {
                     max-width: 100%;
                 }
+            }
+        }
+    }
+
+    #modal {
+        .modal-content {
+            display: grid;
+            width: 95vw;
+            height: auto;
+            padding: 12px;
+
+            grid-template-areas:
+                "titulo"
+                "carrosel"
+                "descricao"
+                "participacao"
+                "tecnologias";
+            grid-template-rows: auto;
+
+            h4 {
+                grid-area: titulo;
+            }
+
+            div {
+                grid-area: carrosel;
+            }
+
+            #modal-description {
+                grid-area: descricao;
+            }
+
+            #participacao {
+                grid-area: participacao ;
+            }
+
+            #tecnologias{
+                grid-area: tecnologias;
+            }
+            button{
+                grid-area: auto;
             }
         }
     }
