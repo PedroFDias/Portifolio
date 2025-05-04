@@ -801,12 +801,15 @@ body {
     }
 
     #inicio {
+        margin-top:90px ;
 
         #apresentacao {
-
+            margin: 0;
+            padding: 0;
             .apresentacao {
                 display: grid;
                 grid-template-columns: 1fr;
+                grid-template-rows: 130px 1fr auto auto auto;
                 grid-template-areas:
                     "apresentacao apresentacao"
                     "img          img"
@@ -817,6 +820,7 @@ body {
                 .apresentacao-script {
                     grid-area: apresentacao;
                     width: 100%;
+                    gap: 0;
 
                     h6 {
                         font-size: 1rem;
