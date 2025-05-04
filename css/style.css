@@ -46,9 +46,7 @@ body {
 
 #cabecalho.header-scrolled {
     background-color: #021017da;
-    /* preto transparente */
-    backdrop-filter: blur(8px);
-    /* opcional, pra dar aquele blur bonito */
+    backdrop-filter: blur(5px);
 }
 
 #cabecalho {
@@ -62,16 +60,7 @@ body {
     left: 0;
     z-index: 1000;
     background-color: transparent;
-    transition: background-color 0.3s ease;
-
-    #menu-toggle {
-        display: none;
-        font-size: 50px;
-        background: none;
-        border: none;
-        color: #d7f9ff;
-        cursor: pointer;
-    }
+    transition: background-color 0.3s ease-in-out;
 
     div .header {
         display: flex;
@@ -79,24 +68,27 @@ body {
         justify-content: space-between;
         width: 100vw;
 
+        .hamburguer {
+            display: none;
+            border: none;
+            background: none;
+            border-top: 3px solid #d7f9ff;
+            align-self: center;
+
+            &::before,
+            &::after {
+                content: " ";
+                display: block;
+                width: 30px;
+                height: 3px;
+                background: #d7f9ff;
+                margin-top: 5px;
+            }
+        }
+
         .menu {
             display: flex;
             gap: 20px;
-        }
-
-        #menu-toggle {
-            display: none;
-        }
-
-        .menu-icon {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .menu-icon .close {
-            display: none;
         }
 
         #nome:after {
@@ -111,7 +103,7 @@ body {
         }
 
         a {
-            color: white;
+            color:#d7f9ff;
             text-decoration: none;
             background-color: transparent;
             font-size: 20px;
@@ -132,7 +124,6 @@ body {
                 color: white;
                 text-decoration: none;
                 background-color: transparent;
-
             }
         }
     }
@@ -392,6 +383,7 @@ body {
         translate: calc(-8 * 250px);
     }
 }
+
 @keyframes deslizar-mobile {
     to {
         translate: calc(-8 * 150px);
@@ -774,8 +766,41 @@ body {
         padding-inline: 20px;
     }
 
+    #cabecalho {
+        div {
+            .header {
+                .hamburguer {
+                    display: block;
+                    z-index: 2000;
+                }
+
+                #menu{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background: #01080ed0;
+                    clip-path: circle(100px at 100% -15%);
+                    transition: 0.5s ease-out;
+
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    gap: 0;
+                    pointer-events: none;
+                }
+
+            }
+            
+        }
+        .header.active #menu{
+            clip-path: circle(1500px at 100% -15%);
+            pointer-events: all;
+        } 
+    }
+
     #inicio {
-        margin-top: 50px;
 
         #apresentacao {
 
@@ -784,16 +809,17 @@ body {
                 grid-template-columns: 1fr;
                 grid-template-areas:
                     "apresentacao apresentacao"
-                    "sobreMim     sobreMim"
                     "img          img"
-                    "saibaMais    icons";
+                    "sobreMim     sobreMim"
+                    "saibaMais    saibaMais"
+                    "icons    icons";
 
                 .apresentacao-script {
                     grid-area: apresentacao;
                     width: 100%;
 
                     h6 {
-                        font-size: 0.8rem;
+                        font-size: 1rem;
                     }
 
                     h1 {
@@ -822,9 +848,9 @@ body {
 
                 .circulo-fora {
                     grid-area: img;
-                    max-width: min-content;
-                    max-height: 210px;
                     justify-self: center;
+
+                    border: 1px solid rgba(0, 238, 255, 0.466);
 
                     .circulo-dentro {
                         background-color: #01080e;
@@ -841,13 +867,20 @@ body {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            max-width: 200px;
-                            max-height: 200pc;
+                            max-width: 260px;
+                            max-height: 260px;
                             border-radius: 50%;
                         }
                     }
+                }
 
+                a{
+                    grid-area: saibaMais;
+                    justify-self: center;
 
+                    font-size: 0.9rem;
+
+                    padding: 8px;
                 }
             }
         }
@@ -855,14 +888,15 @@ body {
 
     #sobre-mim {
         .sobre-mim {
-            h2{
+            h2 {
                 font-size: 2rem;
             }
+
             .info {
                 display: flex;
                 flex-direction: column;
-                
-                h2{
+
+                h2 {
                     text-align: center;
                 }
 
@@ -871,25 +905,25 @@ body {
                 }
             }
 
-            .tecno{
+            .tecno {
                 display: block;
 
-                h2{
+                h2 {
                     text-align: center;
                 }
 
-                .carrossel{
-                    .swiper{
+                .carrossel {
+                    .swiper {
                         grid-auto-columns: 150px;
                         animation: deslizar-mobile 10s linear infinite;
 
-                        img{
+                        img {
                             filter: grayscale(0);
                             height: 30px;
                         }
                     }
                 }
-                
+
             }
         }
     }
@@ -900,7 +934,7 @@ body {
             .Titulo,
             .Titulo span {
                 font-size: 2rem;
-                
+
             }
 
             .projetos {

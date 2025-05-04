@@ -90,14 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
-const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    let menuAberto = false;
+const hamburguer = document.querySelector(".hamburguer");
+const menu = document.querySelector(".header");
 
-    toggle.addEventListener('click', () => {
-        menuAberto = !menuAberto;
-        menu.classList.toggle('active');
-
-        // Troca o ícone
-        toggle.textContent = menuAberto ? '✖' : '☰';
-    });
+hamburguer.addEventListener("click", () => menu.classList.toggle("active"));
