@@ -84,6 +84,16 @@ body {
                 background: #d7f9ff;
                 margin-top: 5px;
             }
+
+        }
+        p{
+            display: none;
+        }
+        
+        p.active{
+            display: block;
+            font-size: x-small;
+            margin-top: auto;
         }
 
         .menu {
@@ -776,18 +786,20 @@ body {
                 #menu {
                     position: fixed;
                     top: 0;
-                    left: 0;
+                    right: 0;
                     width: 100vw;
                     height: 100vh;
-                    background: #01080ed0;
+                    background: #01080ef5;
+                    backdrop-filter: blur(15px);
                     clip-path: circle(100px at 100% -15%);
                     transition: 0.5s ease-out;
-
                     flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
+                    align-items: end;
                     gap: 0;
                     pointer-events: none;
+                    padding-top: 70px;
+                    padding-right: 15px;
+                    gap: 20px;
                 }
 
             }
@@ -981,13 +993,14 @@ body {
             }
 
             #participacao {
-                grid-area: participacao ;
+                grid-area: participacao;
             }
 
-            #tecnologias{
+            #tecnologias {
                 grid-area: tecnologias;
             }
-            button{
+
+            button {
                 grid-area: auto;
             }
         }

@@ -92,5 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const hamburguer = document.querySelector(".hamburguer");
 const menu = document.querySelector(".header");
+const direitos = document.querySelector(".direitos");
 
-hamburguer.addEventListener("click", () => menu.classList.toggle("active"));
+hamburguer.addEventListener("click", () => {
+    menu.classList.toggle("active")
+    direitos.classList.toggle("active")
+});
