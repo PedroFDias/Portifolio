@@ -968,18 +968,23 @@ body {
     }
 
     #modal {
+        margin: 0;
+        padding: 0;
         .modal-content {
+            margin: 0;
+        padding: 0;
             display: grid;
-            width: 95vw;
-            height: 80vh;
-            padding: 12px;
+            width: 100vw;
+            height: 100vh;
+            padding: 8px;
+            border: none;
 
             grid-template-areas:
                 "titulo"
                 "carrosel"
                 "descricao"
+                "participacao"
                 "tecnologias";
-            grid-template-rows: auto;
 
             h4 {
                 grid-area: titulo;
@@ -995,8 +1000,8 @@ body {
             }
 
             #participacao {
-                display: none;
                 grid-area: participacao;
+                font-size: 0.7rem;
             }
 
             #tecnologias {
