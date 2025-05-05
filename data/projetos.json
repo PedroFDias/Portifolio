@@ -10,7 +10,7 @@
             "images/projetos/casacidada4.png"
         ],
         "link": "https://github.com/LucasDias2002/CasaCidada",
-        "tecnologias": "Java ScriptCSS · NodeJs · Express · Sequeliza · Cloudinary · PostgreSQL",
+        "tecnologias": "Java Script · CSS · NodeJs · Express · Sequeliza · Cloudinary · PostgreSQL",
         "participacao": "No projeto, atuei na implementação da API e do backend, desenvolvendo funcionalidades como o CRUD de usuários e dados da instituição, integração com o banco de dados MySQL, e testes de requisições com ferramentas como Postman e Insomnia."
     },
     {

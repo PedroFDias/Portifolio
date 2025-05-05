@@ -549,15 +549,16 @@ body {
     .modal-content {
         display: grid;
         grid-template-areas:
-            "carrosel carrosel titulo"
+            "titulo titulo titulo"
             "carrosel carrosel descricao"
             "carrosel carrosel atuacao"
             "carrosel carrosel tecnologias";
-        background: #122a2e;
+        background: #021017;
+        border: 0.5px solid #d7f9ff6c;
         padding: 20px;
-        border-radius: 8px;
+        border-radius: 0%;
         width: 70vw;
-        height: 53vh;
+        min-height: 60vh;
         text-align: center;
         gap: 20px;
 
@@ -568,18 +569,19 @@ body {
             font-size: 30px;
             background: none;
             border: none;
-            color: #333;
+            color: #d7f9ff;
             cursor: pointer;
 
             &:hover {
-                color: #ff0000;
+                color: #0ef;
             }
         }
 
         #carouselExampleSlidesOnly #carrosel {
             display: flex;
-            height: 100%;
-            align-items: center;
+            height: min-content;
+            align-items: start;
+            border-radius: 5px;
         }
 
         h4 {
@@ -969,14 +971,13 @@ body {
         .modal-content {
             display: grid;
             width: 95vw;
-            height: auto;
+            height: 80vh;
             padding: 12px;
 
             grid-template-areas:
                 "titulo"
                 "carrosel"
                 "descricao"
-                "participacao"
                 "tecnologias";
             grid-template-rows: auto;
 
@@ -990,18 +991,36 @@ body {
 
             #modal-description {
                 grid-area: descricao;
+                font-size: 0.7rem;
             }
 
             #participacao {
+                display: none;
                 grid-area: participacao;
             }
 
             #tecnologias {
                 grid-area: tecnologias;
+                font-size: 0.7rem;
             }
 
             button {
                 grid-area: auto;
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 0;
+                padding: auto;
+                font-size: 30px;
+                background: none;
+                border: none;
+                color: #d7f9ff;
+                cursor: pointer;
+    
+                &:hover {
+                    color: #0ef;
+                }
             }
         }
     }
